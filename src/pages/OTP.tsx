@@ -11,7 +11,7 @@ const RESEND_SECONDS = 30
 export function OTP() {
   const { t } = useTranslation()
   const navigate = useNavigate()
-  const { pendingPhone, pendingRole, verifyOtp, requestOtp } = useAuth()
+  const { pendingPhone, pendingRole, verifyOtp, requestOtp , resetPendingPhone } = useAuth()
   const [digits, setDigits] = useState<string[]>(Array(LENGTH).fill(''))
   const [error, setError] = useState<string | null>(null)
   const [verifying, setVerifying] = useState(false)
